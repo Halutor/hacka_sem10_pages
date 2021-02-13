@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Cabecera de página -->
+        <header class="header">
+
+            <img src="https://image.flaticon.com/icons/png/512/1465/1465557.png" alt="" class="header__logo">
+
+            <nav class="header__menu">
+                <ul class="header__containerItems">
+
+                    <li class="header__item"><a href="x" class="header__link header--active">Home</a></li>
+                    <li class="header__item"><a href="x" class="header__link">Foro</a></li>
+                    <li class="header__item"><a href="x" class="header__link">Ingrese</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <section class="main__portada">
+
+                <h1 class="main__content">Hackaton Semana 10 - JavaScripts </h1>
+                <h1 class="main__content">(Dar Click en cada Pregunta)</h1>
+                <p class="main__content">A continuación se muestra la solución de cada pregunta, no olvides clickear.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <section class="section">
+            <ol class="section__containerItems">
+
+                <li class="section__item">
+                    <p class="section__title"><a href="./question01.html" target="_blank"> Utilizando función arrow,
+                            crear una función que reciba como parámetros un nombre, apellido y edad y los retorne en un
+                            string concatenado “Hola mi nombre es sebastián yabiku y mi edad 33”</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 01 <br>
+                        let saludo = (nombre, apellido, edad) => `Hola mi nombre es ${nombre} ${apellido} y tengo
+                        ${edad} años.`; <br>
+
+                        console.log(saludo('Luis', 'Rodríguez', 30)); <br>
+
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question02.html" target="_blank">Cree una función que tome
+                            números y devuelva la suma de sus cubos.</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 02 <br>
+                        let sumCubos = (num1, num2, num3) => `La suma es:
+                        ${num1**3}+${num2**3}+${num3**3}=${num1**3+num2**3+num3**3}`; <br>
+
+                        console.log(sumCubos(1, 5, 9)); <br>
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question03.html" target="_blank">Crear una funcion que me
+                            retorne el tipo de valor entregado, invocar la función para los distintos tipos de js
+                        </a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 03 <br>
+                        let valor = true; <br>
+
+                        let tipoValor = valor => typeof(valor); <br>
+
+                        console.log(tipoValor(valor)); <br>
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question04.html" target="_blank">Crear una función que reciba n
+                            cantidad de argumentos y los sume ( utilizar parametros rest)</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 04 <br>
+                        function sumaRest(num1, num2, ...num3) { <br>
+                        let resultado = num1 + num2; <br>
+
+                        num3.forEach(n=> { <br>
+                        resultado += n; <br>
+                        }); <br>
+                        return console.log(resultado); <br>
+                        } <br>
+
+                        sumaRest(3,2); <br>
+                        sumaRest(1,2,3,4); <br>
+
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question05.html" target="_blank">Crear una función que reciba
+                            un array de valores y filtre los valores que no son string</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 05 <br>
+                        const valores=[1,2,'tres',4,'cinco','seis',7,true,'nueve',10]; <br>
+
+                        const resultNoString =valores.filter(valorInd => typeof value !=='string'); <br>
+
+                        console.log(resultNoString); <br>
+
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question06.html" target="_blank">Cree una función que tome una
+                            matriz de números y devuelva los números mínimos y máximos, en ese orden. </a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 06 <br>
+
+                        let valores6=[1,2,-10,4,7,6,7,30,-20,10]; <br>
+
+                        minMax(); <br>
+
+                        function minMax() { <br>
+                        max=Math.max(...valores6); <br>
+                        min=Math.min(...valores6); <br>
+                        console.log(`[${min}], [${max}]`); <br>
+                        }
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question07.html" target="_blank">Escriba una función que tome
+                            una matriz de 10 enteros (entre 0 y 9) y devuelva una cadena en forma de un número de
+                            teléfono</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 07 <br>
+                        let numTelf7=[1,2,3,4,5,6,7,8,9,0]; <br>
+                        formatPhoneNumber(); <br>
+
+                        function formatPhoneNumber(){ <br>
+                        let aNumTelf7=numTelf7.slice(0,3); <br>
+                        let bNumTelf7=numTelf7.slice(3,-4); <br>
+                        let cNumTelf7=numTelf7.slice(6,-1); <br>
+
+                        let aNum=aNumTelf7.join(''); <br>
+                        let bNum=bNumTelf7.join(''); <br>
+                        let cNum=cNumTelf7.join(''); <br>
+
+                        return console.log(`"(${aNum}) ${bNum}-${cNum}"`); <br>
+                        } <br>
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question08.html" target="_blank">Cree una función que tome una
+                            matriz de matrices con números. Devuelve una nueva matriz (única) con el mayor número de
+                            cada uno.</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 08 <br>
+                        const buscaMax = [[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]; <br>
+                        const maximo = []; <br>
+                        let mayor = 0; <br>
+
+                        for (i = 0; i < buscaMax.length; i++) { <br>
+                            mayor=0; <br>
+                            for (j = 0; j < buscaMax[i].length; j++) { <br>
+                                if (buscaMax[i][j] > mayor) { <br>
+                                mayor = buscaMax[i][j]; <br>
+                                } <br>
+                                }
+                                maximo.push(mayor;) <br>
+                                } <br>
+
+                                console.log(maximo); <br>
+
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"> <a href="./question09.html" target="_blank">Dada una palabra, escriba una
+                            función que devuelva el primer índice y el último índice de un carácter.</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 09 <br>
+                        let cadena01 ='Bienvenido al mundo de JS'; <br>
+                        let cadenaBusca='o'; <br>
+
+                        let buscaChar = (cad01, busca) => cad01.indexof(busca); <br>
+
+                        console.log(buscaChar(cadena01, cadenaBusca)); <br>
+
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question10.html" target="_blank">Escriba una función que
+                            convierta un objeto en una matriz, donde cada elemento representa un par clave-valor.</a>
+                    </p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 10  <br>
+                         </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question11.html" target="_blank">Se les dará un bono por
+                            antigüedad a los empleados de una tienda. Si
+                            tienen un
+                            año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5
+                            años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo
+                            y represéntelo ,que permita determinar el bono que recibirá un trabajador</a></p>
+                    <p class="section__parrafo">
+                        // Código para ejercicio Nro 11 <br>
+                        var anoAntiguedad = parseInt(prompt('Introducir años de antiguedad')); <br>
+
+                        console.log(`Te corresponde como bono: ${obtieneBono(bono)} soles`); <br>
+
+
+                        //Obtiene Bono <br>
+                        function obtieneBono(num1) { <br>
+
+                        if (anoAntiguedad < 5) <br>
+                            num1=anoAntiguedad * 100;
+                            <br>else num1=5 * 100; <br>} </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question12.html" target="_blank">Un profesor tiene un salario
+                            inicial de $1500, y recibe un incremento de
+                            10 %
+                            anual
+                            durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido
+                            en cada uno de los 6 años? Realice el algoritmo y representan la solución,
+                            utilizando el ciclo apropiado </a></p>
+                    <p class="section__parrafo">Inicio <br>
+                        Variables: ano=0, salario=1500, porc=0.10 <br>
+
+                        Mientras ano <= 6 <br>
+                            ano=ano+1 <br>
+                            salario=salario + (salario * porc) <br>
+                            Escribir ("Salario por año=", salario) <br>
+                            FinMientras<br>
+                            Fin
+                    </p>
+
+                </li>
+                <li class=" section__item">
+                    <p class="section__title"><a href="./question13.html" target="_blank">Realice un algoritmo para leer
+                            las calificaciones de N alumnos y determine
+                            el
+                            número de aprobados y reprobados</a></p>
+                    <p class="section__parrafo">Inicio <br>
+                        Variables: aprobados=0, reprobados=0, resultado, estudiantes=0 <br>
+
+                        Mientras estudiantes <= 20 <br>
+                            estudiantes=estudiantes+1 <br>
+                            Escribir ("Ingrese nota") <br>
+                            Leer resultado <br>
+
+                            Si resultado >10 <br>
+                            aprobados= aprobados +1 <br>
+
+                            Sino <br>
+                            reprobados= reprobados +1 <br>
+
+                            EndSi <br>
+                            FinMientras<br>
+
+                            Escribir ("Aprobados=", aprobados) <br>
+                            Escribir ("Desaprobados=", desaprobados) <br>
+                            Fin
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question14.html" target="_blank">Una compañía, fabrica focos de
+                            colores (verdes, blancos y rojos). Se desea
+                            contabilizar, de un lote de N focos, el número de focos de cada color que hay en
+                            existencia</a></p>
+                    <p class="section__parrafo">Inicio <br>
+                        Variables: verdes=0, blancos=0, rojos=0, color, focos=0 <br>
+
+                        Mientras focos <= 20 <br>
+                            focos=focos+1 <br>
+                            Escribir ("Ingrese color") <br>
+                            Leer color <br>
+
+                            Si color = "verde" <br>
+                            verdes= verdes + 1 <br>
+                            EndSi <br>
+
+                            Si color = "blanco" <br>
+                            blancos= blancos + 1 <br>
+                            EndSi <br>
+
+                            Si color = "rojo" <br>
+                            rojos= rojos + 1 <br>
+                            EndSi <br>
+
+
+                            FinMientras<br>
+
+                            Escribir ("Verdes=", verdes) <br>
+                            Escribir ("Rojos=", rojos) <br>
+                            Escribir ("Blancos=", blancos) <br>
+                            Fin
+                    </p>
+                </li>
+                <li class="section__item">
+                    <p class="section__title"><a href="./question15.html" target="_blank">Realice un algoritmo para
+                            determinar si una persona puede votar con base
+                            en
+                            su edad en las próximas elecciones</a></p>
+                    <p class="section__parrafo">Inicio <br>
+                        Variables: vota="NO", edad <br>
+
+                        Escribir ("Ingrese edad") <br>
+                        Leer edad <br>
+
+                        Si edad <= 65 <br>
+                            vota="SI" <br>
+                            EndSi <br>
+
+                            Escribir ("¿Puede votar?", vota) <br>
+
+                            Fin
+                    </p>
+                </li>
+            </ol>
+
+
+
+        </section>
+    </div>
+
+</body>
+
+
+</html>
